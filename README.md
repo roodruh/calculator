@@ -1,2 +1,2 @@
 # calculator
-Making an oncrenn calculator
+Making a calculator with GUI
