@@ -16,13 +16,13 @@ const calcTitle = document.createElement('div');
 row0.appendChild(calcTitle);
 calcTitle.setAttribute('id', 'calc-title');
 calcTitle.setAttribute('class', 'title');
-calcTitle.innerHTML = 'CALCULATOR';
+calcTitle.innerText = 'CALCULATOR';
 
 //adding battery symbol to row 0
 const battery = document.createElement('div');
 row0.appendChild(battery);
 battery.setAttribute('id', 'battery');
-battery.innerHTML = '#####';
+battery.innerText = '#####';
 
 //adding hr element after row 0
 app.appendChild(hr);
@@ -43,6 +43,48 @@ const row2 = document.createElement('div');
 app.appendChild(row2);
 row2.setAttribute('class', 'row');
 
-//creating row above numberpad of calculator
+//creating left column
+const leftColumn = document.createElement('div');
+row2.appendChild(leftColumn);
+leftColumn.setAttribute('id', 'l-col')
+leftColumn.setAttribute('class', 'col');
+
+//creating top row for left column
 const topRow = document.createElement('div');
-row2.appendChild('')
+leftColumn.appendChild(topRow);
+topRow.setAttribute('class', 'row, top-row');
+
+//creating AC button
+const resetButton = document.createElement('button');
+topRow.appendChild(resetButton);
+resetButton.setAttribute('type', 'button');
+resetButton.setAttribute('class', 'btn light');
+resetButton.innerText = 'AC';
+
+//creating change sign button
+const changeSign = document.createElement('button');
+topRow.appendChild(changeSign);
+changeSign.setAttribute('type', 'button');
+changeSign.setAttribute('type', 'btn light');
+changeSign.innerText = '+/-';
+
+//creating modulus button
+const modulus = document.createElement('button');
+topRow.appendChild(modulus);
+modulus.setAttribute('type', 'button');
+modulus.setAttribute('type', 'btn light');
+modulus.innerText = '%';
+
+//creating middle row for left column
+const midRow = document.createElement('div');
+leftColumn.appendChild(midRow);
+midRow.setAttribute('class', 'row, mid-row');
+
+//creating number pad
+const numPad = document.createAttribute('div');
+midRow.appendChild(numPad);
+
+    //creating for loop for generating number keys
+    for(let i = 0; i < 9; i++){
+        const numKey = stringTo
+    }

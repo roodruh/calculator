@@ -51,6 +51,11 @@ body {
 }
 
 
+.col {
+    border: 1px white solid;
+}
+
+
 #app hr {
     margin-top: 0;
     margin-bottom: 0;
