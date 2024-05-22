@@ -113,6 +113,16 @@ numPad.appendChild(numPadB);
 numPadB.setAttribute('class', 'num-row');
 KeyGen(4, 6, numPadB);
 
+const bottomRow = document.createElement('div');
+leftColumn.appendChild(bottomRow);
+bottomRow.setAttribute('class', 'bottom-row');
+
+const zeroBtn = document.createElement('button');
+bottomRow.appendChild(zeroBtn);
+zeroBtn.setAttribute('class', 'btn dark zero-btn');
+zeroBtn.innerText = 0;
+
+
 
 
 

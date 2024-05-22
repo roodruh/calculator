@@ -95,6 +95,12 @@ body {
 }
 
 
+.bottom-row {
+    display: flex;
+    justify-content: center;
+}
+
+
 .title {
     font-family: monospace;
     color: rgb(243, 222, 57);
