@@ -65,14 +65,14 @@ resetButton.innerText = 'AC';
 const changeSign = document.createElement('button');
 topRow.appendChild(changeSign);
 changeSign.setAttribute('type', 'button');
-changeSign.setAttribute('type', 'btn light');
+changeSign.setAttribute('class', 'btn light');
 changeSign.innerText = '+/-';
 
 //creating modulus button
 const modulus = document.createElement('button');
 topRow.appendChild(modulus);
 modulus.setAttribute('type', 'button');
-modulus.setAttribute('type', 'btn light');
+modulus.setAttribute('class', 'btn light');
 modulus.innerText = '%';
 
 //creating middle row for left column
@@ -81,10 +81,47 @@ leftColumn.appendChild(midRow);
 midRow.setAttribute('class', 'row, mid-row');
 
 //creating number pad
-const numPad = document.createAttribute('div');
+const numPad = document.createElement('div');
 midRow.appendChild(numPad);
+numPad.setAttribute('id', 'num-pad');
 
-    //creating for loop for generating number keys
-    for(let i = 0; i < 9; i++){
-        const numKey = stringTo
+//function to generate numKeys for each row
+function KeyGen(m, n, rowName) {
+    for(m ; m < n + 1; m++) {
+        const numKey = document.createElement('button');
+        rowName.appendChild(numKey);
+        numKey.setAttribute('type', 'button')
+        numKey.setAttribute('id', m);
+        numKey.setAttribute('class', 'num-key btn dark');
+        numKey.innerText = m;
     }
+}
+
+//creating 7,8,9 row for top row of numpad
+const numPadT = document.createElement('div');
+numPad.appendChild(numPadT);
+numPadT.setAttribute('class', 'num-row');
+KeyGen(7, 9, numPadT);
+
+const numPadM = document.createElement('div');
+numPad.appendChild(numPadM);
+numPadM.setAttribute('class', 'num-row');
+KeyGen(4, 6, numPadM);
+
+const numPadB = document.createElement('div');
+numPad.appendChild(numPadB);
+numPadB.setAttribute('class', 'num-row');
+KeyGen(4, 6, numPadB);
+
+
+
+
+    // creating for loop for generating number keys
+    // for(let i = 0; i < 9; i++){
+    //     const numKey = document.createElement('button');
+    //     numPad.appendChild(numKey);
+    //     numKey.setAttribute('type', 'button')
+    //     numKey.setAttribute('id', i);
+    //     numKey.setAttribute('class', 'num-key btn dark');
+    //     numKey.innerText = i + 1;
+    // }
