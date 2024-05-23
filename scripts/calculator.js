@@ -6,42 +6,37 @@ const app = document.createElement('div');
 body.appendChild(app);
 app.setAttribute('id', 'app');
 
-//creating row 0 of the app window
-const row0 = document.createElement('div');
-app.appendChild(row0);
-row0.setAttribute('class', 'row');
+// //creating row 0 of the app window
+// const row0 = document.createElement('div');
+// app.appendChild(row0);
+// row0.setAttribute('class', 'row');
 
-//adding calculator title to row 0
-const calcTitle = document.createElement('div');
-row0.appendChild(calcTitle);
-calcTitle.setAttribute('id', 'calc-title');
-calcTitle.setAttribute('class', 'title');
-calcTitle.innerText = 'CALCULATOR';
+// //adding calculator title to row 0
+// const calcTitle = document.createElement('div');
+// row0.appendChild(calcTitle);
+// calcTitle.setAttribute('id', 'calc-title');
+// calcTitle.setAttribute('class', 'title');
+// calcTitle.innerText = 'CALCULATOR';
 
-//adding battery symbol to row 0
-const battery = document.createElement('div');
-row0.appendChild(battery);
-battery.setAttribute('id', 'battery');
-battery.innerText = '#####';
+// //adding battery symbol to row 0
+// const battery = document.createElement('div');
+// row0.appendChild(battery);
+// battery.setAttribute('id', 'battery');
+// battery.innerText = '#####';
 
 //adding hr element after row 0
-app.appendChild(hr);
-
-//creating row 1
-const row1 = document.createElement('div');
-app.appendChild(row1);
-row1.setAttribute('class', 'row');
+// app.appendChild(hr);
 
 //adding form elemnt to row 1
 const calcInput = document.createElement('input');
-row1.appendChild(calcInput);
+app.appendChild(calcInput);
 calcInput.setAttribute('type', 'form');
 calcInput.setAttribute('id', 'calc-input');
 
 //creating row 2
 const row2 = document.createElement('div');
 app.appendChild(row2);
-row2.setAttribute('class', 'row');
+row2.setAttribute('id', 'row-2');
 
 //creating left column
 const leftColumn = document.createElement('div');
@@ -111,7 +106,7 @@ KeyGen(4, 6, numPadM);
 const numPadB = document.createElement('div');
 numPad.appendChild(numPadB);
 numPadB.setAttribute('class', 'num-row');
-KeyGen(4, 6, numPadB);
+KeyGen(1, 3, numPadB);
 
 const bottomRow = document.createElement('div');
 leftColumn.appendChild(bottomRow);
@@ -123,15 +118,53 @@ zeroBtn.setAttribute('class', 'btn dark zero-btn');
 zeroBtn.innerText = 0;
 
 
+//creating right column
+const rightColumn = document.createElement('div');
+row2.appendChild(rightColumn);
+rightColumn.setAttribute('id', 'r-col')
+rightColumn.setAttribute('class', 'col');
+
+//creating division btn
+const divBtn = document.createElement('btn');
+rightColumn.appendChild(divBtn);
+divBtn.setAttribute('type', 'button');
+divBtn.setAttribute('class', 'btn warning');
+divBtn.innerText = '/';
+
+//creating multiplication button
+const multBtn = document.createElement('btn');
+rightColumn.appendChild(multBtn);
+multBtn.setAttribute('type', 'button');
+multBtn.setAttribute('class', 'btn warning');
+multBtn.innerText = 'x';
+
+//creating minus button
+const minusBtn = document.createElement('btn');
+rightColumn.appendChild(minusBtn);
+minusBtn.setAttribute('type', 'button');
+minusBtn.setAttribute('class', 'btn warning');
+minusBtn.innerText = '-';
+
+//creating addition button
+const addBtn = document.createElement('button');
+rightColumn.appendChild(addBtn);
+addBtn.setAttribute('type', 'button');
+addBtn.setAttribute('class', 'btn warning');
+addBtn.innerText = '+';
+
+//creating equal to button;
+const equalBtn = document.createElement('button');
+rightColumn.appendChild(equalBtn);
+equalBtn.setAttribute('type', 'button');
+equalBtn.setAttribute('class', 'btn warning');
+equalBtn.innerText = '=';
 
 
 
-    // creating for loop for generating number keys
-    // for(let i = 0; i < 9; i++){
-    //     const numKey = document.createElement('button');
-    //     numPad.appendChild(numKey);
-    //     numKey.setAttribute('type', 'button')
-    //     numKey.setAttribute('id', i);
-    //     numKey.setAttribute('class', 'num-key btn dark');
-    //     numKey.innerText = i + 1;
-    // }
+
+
+
+
+
+
+
